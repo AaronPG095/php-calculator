@@ -36,7 +36,7 @@
     cursor: pointer;
     margin: 10px;
 }
-.calculator form input:hover{
+.calculator form input[type=button]:hover{
     background:#e3f9ff;
     color: black;
 }
@@ -54,16 +54,20 @@ font-size: 45px;
 box-shadow: none;
 }
 
+form input.equal{
+    width: 145px;
+}
+
 form input.operator {
     color: #33ffd8;
 }
 
-.flex-row {
+/* .flex-row {
     display: flex;
     flex-direction: row;
-}
+} */
 
-.operator-container {
+/* .operator-container {
     display: grid;
     grid-auto-flow: row;
-}
+} */
