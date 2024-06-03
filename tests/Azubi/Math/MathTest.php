@@ -44,4 +44,24 @@ class MathTest extends TestCase
         $this->assertEquals(5.0, $this->sut->subtract(15.0, 10.0));
         $this->assertEquals(-3.0, $this->sut->subtract(6.0, 9.0));
     }
+
+    public function testMultiply()
+    {
+        $this->assertEquals(4.0, $this->sut->multiply(2.0, 2.0));
+        $this->assertEquals(20.0, $this->sut->multiply(4.0, 5.0));
+        $this->assertEquals(0.25, $this->sut->multiply(0.5, 0.5));
+    }
+
+    public function testDivide()
+    {
+        $this->assertEquals(2.0, $this->sut->divide(4.0, 2.0));
+        $this->assertEquals(0.5, $this->sut->divide(1.0, 2.0));
+        $this->assertEquals(1.0, $this->sut->divide(0.5, 0.5));
+    }
+
+    public function testDivideByZero()
+    {
+        $this->expectException(\InvalidArgumentException::class);
+        $this->sut->divide(1.0, 0.0);
+    }
 }

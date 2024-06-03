@@ -1,65 +1,25 @@
 <?php
+declare(strict_types=1);
 
 namespace Azubi\Math;
 
-class Math
-{
-    // Properties / Fields
-    private $operator;
-    private $num1;
-    private $num2;
-
-    // Constructor
-    public function __construct(string $operator, float $num1, float $num2)
-    {
-        $this->operator = $operator;
-        $this->num1 = $num1;
-        $this->num2 = $num2;
+class Math implements MathInterface { 
+    public function add(float $value1, float $value2): float {
+        return $value1 + $value2;
     }
 
-    // Getter & Setter Methods
-
-    
-
-    // Operator Methods
-    public function add($num1, $num2)
-    {
-        return $num1 + $num2;
+    public function subtract(float $value1, float $value2): float {
+        return $value1 - $value2;
     }
 
-    public function subtract($num1, $num2)
-    {
-        return $num1 - $num2;
+    public function multiply(float $value1, float $value2): float {
+        return $value1 * $value2;
     }
 
-    public function multiply($num1, $num2)
-    {
-        return $num1 * $num2;
-    }
-
-    public function divide($num1, $num2)
-    {
-        return $num1 / $num2;
-    }
-    // Simplify Math to one switch case function that collets operator ?
-    public function calculate($operator, $num1, $num2)
-    {
-        switch ($operator) {
-            case 'add':
-                return $num1 + $num2;
-                break;
-            case 'subtract':
-                return $num1 - $num2;
-                break;
-            case 'multiply':
-                return $num1 * $num2;
-                break;
-            case 'divide':
-                return $num1 / $num2;
-                break;
-            default:
-                return 'Cant be calculated';
-                break;
+    public function divide(float $value1, float $value2): float {
+        if ($value2 == 0.0) {
+            throw new \InvalidArgumentException('Invalid operation: Division by zero.');
         }
+        return $value1 / $value2;
     }
 }
