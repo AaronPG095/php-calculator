@@ -1,21 +1,3 @@
-
-document.addEventListener('DOMContentLoaded', (event) => {
-    // Select all text input elements
-    const operatorInputs = document.querySelectorAll('input[type="button"]');
-
-    // Add click event listener to each operator input
-    operatorInputs.forEach(input => {
-        input.addEventListener('click', function() {
-            // Remove 'selected' class from all inputs
-            operatorInputs.forEach(inp => inp.classList.remove('selected'));
-            // Set the value of the hidden input to the name of the clicked input
-            document.getElementById('selectedInput').value = this.name;
-            // Add the 'selected' class to the clicked input
-            this.classList.add('selected');
-        });
-    });
-});
-
 // listens for action "submit" on form with id "calcForm"
 // exec handleFormSubmit
 document.getElementById("calcForm").addEventListener("submit", handleFormSubmit);

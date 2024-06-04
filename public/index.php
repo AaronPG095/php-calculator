@@ -8,7 +8,7 @@
 <head>
     <meta charset="utf-8">
     <title>Calculator</title>
-    <link type="text" href="./css/style.css" rel="stylesheet" />
+    <link type="text" href="public/css/style.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -22,22 +22,23 @@
                     <input class="form-input" type="number" step="any" name="value2" id="value2" placeholder="Second Value">
                 </div>
                 <div class="flex-row">
-                    <label class="form-label" for="add"></label>
-                    <input id="operator" class="operator" name="add" type="button" value="+">
-                    <label class="form-label" for="subtract"></label>
-                    <input id="operator" class="operator" name="subtract" type="button" value="-">
-                    <label class="form-label" for="multiply"></label>
-                    <input id="operator" class="operator" name="multiply" type="button" value="*">
-                    <label class="form-label" for="divide"></label>
-                    <input id="operator" class="operator" name="divide" type="button" value="/">
-
-                    <input type="hidden" id="selectedInput" name="selectedInput">
+                    <div class="select-flex">
+                        <select name="operation" id="operation">
+                            <div class="flex-row">
+                                <option class="operator">Add</option>
+                                <option class="operator">Subtract</option>
+                                <option class="operator">Multiply</option>
+                                <option class="operator">Divide</option>
+                            </div>
+                        </select>
+                    </div>
+                    <input class="form-input" type="submit" value="Calculate">
                 </div>
                 <div class="flex-row">
                     <div class="display">
-                        <input type="text" name="form-result" id="result">
+                        <div class="inner-display" name="form-result" id="result"></div>
                     </div>
-                    <input class="form-input" type="submit" value="Calculate">
+
                 </div>
             </form>
         </div>
@@ -45,7 +46,7 @@
     </div>
 
 
-    <script type="text/javascript" src="./js/script.js"></script>
+    <script type="text/javascript" src="public/js/script.js"></script>
 </body>
 
 </html>
