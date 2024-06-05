@@ -36,3 +36,9 @@ Durch den Befehl <code>composer install</code> werden dem Projekt alle nötigen 
 Die Eingabe von <code>composer require **PAKET_NAME**</code> wird dem Projekt beispielsweise das Paket **PAKET_NAME** und dessen Abhängigkeiten hinzufügen.
 
 Näheres dazu unter: [getcomposer.org](https://getcomposer.org/)
+
+## Remarks:
+
+* Server starten in Root Directory mit: php -S localhost:8000 (da sonst Probleme mit dem HTTPRequest aus public heraus)
+* go to: localhost:8000/public für Calculator App (da Server Root in localhost:8000 läuft)
+* Starte Tests mit "composer test" in Root Directory (script dafür in composer.json)
