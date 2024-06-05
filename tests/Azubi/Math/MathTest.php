@@ -48,7 +48,7 @@ class MathTest extends TestCase
     public function testMultiply()
     {
         $this->assertEquals(4.0, $this->sut->multiply(2.0, 2.0));
-        $this->assertEquals(20.0, $this->sut->multiply(4.0, 5.0));
+        $this->assertEquals(-50.0, $this->sut->multiply(-5, 10.0));
         $this->assertEquals(0.25, $this->sut->multiply(0.5, 0.5));
     }
 
