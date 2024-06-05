@@ -25,10 +25,14 @@
                     <div class="select-flex">
                         <select name="operation" id="operation">
                             <div class="flex-row">
-                                <option class="operator">Add</option>
-                                <option class="operator">Subtract</option>
-                                <option class="operator">Multiply</option>
-                                <option class="operator">Divide</option>
+                                <label for="add"></label>
+                                <option name="add" class="operator">Add</option>
+                                <label for="subtract"></label>
+                                <option name="subtract" class="operator">Subtract</option>
+                                <label for="multiply"></label>
+                                <option name="multiply" class="operator">Multiply</option>
+                                <label for="divide"></label>
+                                <option name="divide" class="operator">Divide</option>
                             </div>
                         </select>
                     </div>
